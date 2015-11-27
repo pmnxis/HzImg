@@ -14,15 +14,16 @@ typedef unsigned char uint8_t;
 
 
 struct imgPot {
-	int weight;
+	int width;
 	int height;
 	uint8_t * data;
 }typedef imgPot;
 
-struct floatPot {
-	int weight;
+struct doublePot {
+	int width;
 	int height;
-	float * data;
-}typedef floatPot;
+	double * data;
+}typedef doublePot;
 
 extern imgPot * Create_imgPot(const char filepath[], int w, int h);
+extern uint8_t reviseUINT8(double input);
