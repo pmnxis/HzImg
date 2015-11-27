@@ -1,4 +1,6 @@
-#include "HzImg.h"
+﻿#include "HzImg.h"
+
+
 
 imgPot * Create_imgPot(const char filepath[], int w, int h) {
 	FILE * fp;
