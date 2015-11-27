@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-
 #ifndef uint8_t
 typedef unsigned char uint8_t;
 #endif
@@ -27,3 +26,6 @@ struct doublePot {
 
 extern imgPot * Create_imgPot(const char filepath[], int w, int h);
 extern uint8_t reviseUINT8(double input);
+extern void Destroy_imgPot(imgPot * pot);
+extern void Destroy_doublePot(doublePot * pot);
+void store_ImgPot(imgPot * pot, const char filepath[]);

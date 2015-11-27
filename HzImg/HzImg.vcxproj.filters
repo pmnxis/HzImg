@@ -24,7 +24,10 @@
     <ClCompile Include="DFT.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="DCT.cpp">
+    <ClCompile Include="DCT.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CmpData.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="DCT.h">
       <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CmpData.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -118,12 +118,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DCT.cpp" />
+    <ClCompile Include="CmpData.c" />
+    <ClCompile Include="DCT.c" />
     <ClCompile Include="DFT.c" />
     <ClCompile Include="HzImg.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CmpData.h" />
     <ClInclude Include="DCT.h" />
     <ClInclude Include="DFT.h" />
     <ClInclude Include="HzImg.h" />
