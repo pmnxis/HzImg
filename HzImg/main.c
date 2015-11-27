@@ -23,13 +23,13 @@ int main() {
 	store_ImgPot(re_LENA, "re_LENA");
 	store_ImgPot(re_CITY, "re_CITY");
 
-	stord_ImgPot(rd_LENA, "rd_LENA");
-	stord_ImgPot(rd_CITY, "rd_CITY");
+	store_ImgPot(rd_LENA, "rd_LENA");
+	store_ImgPot(rd_CITY, "rd_CITY");
 	
 	
 	//  비교
-	printf("lena_512x512.raw , MSE : %lf , IDCT : %lf", MSEcmp(LENA, rd_LENA), PSNRcmp(LENA, rd_LENA));
-	printf("city_1280x720.raw , MSE : %lf , IDCT : %lf", MSEcmp(CITY, rd_CITY), PSNRcmp(LENA, rd_LENA));
+	printf("lena_512x512.raw , MSE : %lf , IDCT : %lf\n", MSEcmp(LENA, rd_LENA), PSNRcmp(LENA, rd_LENA));
+	printf("city_1280x720.raw , MSE : %lf , IDCT : %lf\n", MSEcmp(CITY, rd_CITY), PSNRcmp(LENA, rd_LENA));
 
 
 	//  소멸자
@@ -48,6 +48,7 @@ int main() {
 	Destroy_imgPot(rd_LENA);
 	Destroy_imgPot(rd_CITY);
 
+	BASH_STOP
 
 	return 0;
 }

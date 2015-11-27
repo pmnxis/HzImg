@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include <math.h>
 
+//   VISUAL STUDIO stop! (instead of Ctrl + F5)
+#if _MSC_VER >= 1600
+#pragma warning(disable:4996)
+#include <Windows.h>
+#define BASH_STOP { printf("\n\n"); system("PAUSE");}
+#else
+#define STOP {}
+#endif
+
 #ifndef uint8_t
 typedef unsigned char uint8_t;
 #endif

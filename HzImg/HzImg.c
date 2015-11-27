@@ -13,7 +13,7 @@ imgPot * Create_imgPot(const char filepath[], int w, int h) {
 	return pot;
 }
 
-extern uint8_t reviseUINT8(double _input) {
+uint8_t reviseUINT8(double _input) {
 	double input = _input + 0.5;
 	if (input < 0)return 0;
 	else if (input > 255) return 255;

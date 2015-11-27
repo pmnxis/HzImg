@@ -95,7 +95,7 @@ imgPot * InverseDCT(imgPot * src) {
 	return newElement;
 }
 
-extern imgPot * ForwardDCT_double(imgPot * src){
+doublePot * ForwardDCT_double(imgPot * src){
 	int districtW, districtH;
 	int dw, dh;  // distrct (Inter) width, district (inter) Height
 	int iw, ih;  //  intra width, intra Height
@@ -141,7 +141,7 @@ extern imgPot * ForwardDCT_double(imgPot * src){
 	return newElement;
 }
 
-extern imgPot * InverseDCT_double(doublePot * src) {
+imgPot * InverseDCT_double(doublePot * src) {
 	int ww, hh;
 	int districtW, districtH;
 	int dw, dh;  // distrct (Inter) width, district (inter) Height
