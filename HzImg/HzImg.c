@@ -13,6 +13,15 @@ imgPot * Create_imgPot(const char filepath[], int w, int h) {
 	return pot;
 }
 
+imgPot * cp_imgPot(imgPot * src) {
+	imgPot * pot;
+	pot = (imgPot *)calloc(1, sizeof(imgPot));
+	pot->data = (uint8_t *)calloc(src->width*src->height, sizeof(uint8_t));
+	pot->width = src->width;
+	pot->height = src->height;
+	return pot;
+}
+
 uint8_t reviseUINT8(double _input) {
 	double input = _input + 0.5;
 	if (input < 0)return 0;

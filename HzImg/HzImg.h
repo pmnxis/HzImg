@@ -34,6 +34,7 @@ struct doublePot {
 }typedef doublePot;
 
 extern imgPot * Create_imgPot(const char filepath[], int w, int h);
+extern imgPot * cp_imgPot(imgPot * src);
 extern uint8_t reviseUINT8(double input);
 extern void Destroy_imgPot(imgPot * pot);
 extern void Destroy_doublePot(doublePot * pot);
