@@ -16,21 +16,15 @@ int main() {
 
 //  비교
 	printf("lena_512x512.raw , MSE : %lf , IDCT : %lf\n", MSEcmp(LENA, rd_LENA), PSNRcmp(LENA, rd_LENA));
-//	printf("city_1280x720.raw , MSE : %lf , IDCT : %lf\n", MSEcmp(CITY, rd_CITY), PSNRcmp(LENA, rd_LENA));
-
 
 	//  소멸자
 	Destroy_imgPot(LENA);
-//	Destroy_imgPot(CITY);
 
 	Destroy_imgPot(Hz_LENA);
-//	Destroy_imgPot(Hz_CITY);
 	
 	Destroy_imgPot(rd_LENA);
-//	Destroy_imgPot(rd_CITY);
-
 	BASH_STOP
-
+			
 	return 0;
 }
 

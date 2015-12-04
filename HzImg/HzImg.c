@@ -31,7 +31,9 @@ uint8_t reviseUINT8(double _input) {
 
 void Destroy_imgPot(imgPot * pot) {
 	free(pot->data);
+	printf("d");
 	free(pot);
+	printf("D");
 }
 
 void Destroy_doublePot(doublePot * pot) {
@@ -41,7 +43,10 @@ void Destroy_doublePot(doublePot * pot) {
 
 void store_ImgPot(imgPot * pot, const char filepath[]) {
 	FILE * fp;
-	fp = fopen(filepath, "w");
-	fwrite(pot->data, 1, pot->width*pot->height, fp);
+	printf("f");
+	fopen_s(&fp, filepath, "wb");
+
+	printf("f");
+	fwrite(pot->data, sizeof(uint8_t), pot->width*pot->height, fp);
 	fclose(fp);
 }

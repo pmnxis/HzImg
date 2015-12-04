@@ -60,12 +60,15 @@ imgPot * InverseDCT(imgPot * src) {
 	double temp;
 	int storeTemp;
 	//  double real, imag;  /*  실수, 허수  */
+
 	imgPot * newElement = (imgPot *)calloc(1, sizeof(imgPot));
+	newElement->data = (uint8_t *)calloc(src->width*src->height, sizeof(uint8_t));
 	newElement->width = src->width;
 	newElement->height = src->height;
 
 	districtW = (int)(newElement->width / 8);
 	districtH = (int)(newElement->height / 8);
+
 
 	for (dh = 0; dh<districtH; dh++) // i
 	{
