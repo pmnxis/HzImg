@@ -38,4 +38,4 @@ extern imgPot * cp_imgPot(imgPot * src);
 extern uint8_t reviseUINT8(double input);
 extern void Destroy_imgPot(imgPot * pot);
 extern void Destroy_doublePot(doublePot * pot);
-void store_ImgPot(imgPot * pot, const char filepath[]);
+extern void store_ImgPot(imgPot * pot, const char filepath[], long long buffSize);

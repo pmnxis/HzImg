@@ -41,12 +41,26 @@ void Destroy_doublePot(doublePot * pot) {
 	free(pot);
 }
 
-void store_ImgPot(imgPot * pot, const char filepath[]) {
+void store_ImgPot(imgPot * pot, const char filepath[], long long buffSize) {
+	long long seek, total, cutt, looper, i, x,y;
 	FILE * fp;
 	printf("f");
-	fopen_s(&fp, filepath, "wb");
-
+	fp = fopen("result", "w");
+	//  uint8_t * buffer = calloc(buffSize, sizeof(uint8_t));
+	x = (long long)pot->height;
+	y = (long long)pot->width;
+	seek = 0;
+	total = x*y;
+	cutt = total % buffSize;
+	looper = total / buffSize;
+	for (i = 0; i < looper; i++) {
+		fwrite(pot->data[seek], sizeof(uint8_t), buffSize, fp);
+		seek = seek + buffSize;
+	}
+	if (cutt > 0) {
+		fwrite(pot->data[seek], sizeof(uint8_t), cutt, fp);
+	}
 	printf("f");
-	fwrite(pot->data, sizeof(uint8_t), pot->width*pot->height, fp);
+	//  fwrite(pot->data, sizeof(uint8_t), pot->width*pot->height, fp);
 	fclose(fp);
 }
